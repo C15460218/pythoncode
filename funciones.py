@@ -17,14 +17,35 @@ def printMensaje(msg):
 def suma(n1,n2):
 	return n1+n2
 
-def resta():
+def resta(n1,n2):
 	return n1-n2
 
 def multiplicacion(n1,n2):
 	return n1*n2
 
 def division(n1,n2):
-	return n1/n2
+	if(n2!=0):
+		return n1/n2
+	else:
+		print("Error no se puede dividir entre 0")
+
+def compara(n1,n2):
+	if n1>n2:
+		print("EL mayor es n1: ", n1," ", n2)
+	elif n2>n1:
+		print("EL mayor es: {},{}".format(n2,n1))
+	else:
+		print("Los numeros son iguales:{}, {}".format(n1,n2))
+
+def cuenta(n1,n2):
+	if (n2>n1):
+		for i in range(n1,n2+1):
+			print("Valor de i: {}".format(i))
+	elif (n1>n2):
+		for i in range(n1,n2-1,-1):
+			print("valor de i: {}".format(i))
+	else:
+		print("LOs numeros son iguales, no puedo contar: {}, {}".format(n1,n2))
 
 def main():
 	ciclo='S'
@@ -46,6 +67,8 @@ def main():
 		print("La multiplicación es: ", multiplicacion(a,b))
 		#invocamos la funcion división
 		print("La división es: ",division(a,b))
+		compara(a,b)
+		cuenta(a,b)
 		#Preguntamos por otra operación
 		ciclo = input("¿Desea otra operación? (S/N): ")
 	else:
