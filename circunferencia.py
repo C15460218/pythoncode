@@ -17,10 +17,13 @@ def calcularAre(valorRadio):
 
 # Módulo principal
 def main():
-	print("- - - Programa para calcular Área de Circunferencia - - -")
-	vradio = int(input("Introduce valor de radio: "))
-	print("\n")
-	print("EL área de la circunferencia con radio igual a: {}, es: {}".format(vradio,calcularAre(vradio)))
+	ciclo='S'
+	while(ciclo=='S' or ciclo=='s'):
+		print("- - - Programa para calcular Área de Circunferencia - - -")
+		vradio = int(input("Introduce valor de radio: "))
+		print("\n")
+		print("EL área de la circunferencia con radio igual a: {}, es: {}".format(vradio,calcularAre(vradio)))
+		ciclo=input("¿Desea otra operación? (S/N): ")
 
 
 if __name__ == "__main__":
